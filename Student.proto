@@ -1,0 +1,24 @@
+syntax="proto3";
+
+package main;
+
+message Parents {
+      string dad=1;
+      string mom=2;
+}
+
+enum Gender {
+    Female = 0;
+    Male = 1;
+}
+
+message Student {
+      string name = 1;
+      int32 age = 2;
+      Parents parents=3;
+      Gender gender=4;
+}
+
+message Students {
+      repeated bytes StudentEntry=1;
+}
